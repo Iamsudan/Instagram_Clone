@@ -9,7 +9,7 @@ class WebScreenLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(child: Text('THIS IS MOBILE')),
+      body: Center(child: Text('THIS IS Web')),
     );
   }
 }

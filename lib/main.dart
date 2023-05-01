@@ -8,6 +8,7 @@ import 'package:instagram/responsive/web_screen_layout.dart';
 import 'package:instagram/utils/colors.dart';
 
 import 'Screen/signup_screen.dart';
+import 'Screen/splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -41,7 +42,7 @@ class Myapp extends StatelessWidget {
       //     webScreenLayout: WebScreenLayout(),
       //     mobileScreenLayout: MobileScreenLayout()),
 
-      home: const SignupScreen(),
+      home: const SplashScreen(),
     );
   }
 }
