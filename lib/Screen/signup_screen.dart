@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:instagram/Screen/login_screen.dart';
 
 import '../utils/colors.dart';
 import '../widgets/text_field_input.dart';
@@ -41,7 +42,7 @@ class _SignupScreenState extends State<SignupScreen> {
             //svg image
             SvgPicture.asset(
               'assests/ic_instagram.svg',
-              color: primaryColor,
+              color: Colors.blue,
               height: 64,
             ),
             const SizedBox(height: 64),
@@ -115,20 +116,31 @@ class _SignupScreenState extends State<SignupScreen> {
                 Container(
                   padding: const EdgeInsets.symmetric(vertical: 8),
                   child: const Text(
-                    "Already have an account?",
+                    "Already have an account?  ",
                     style: TextStyle(
-                      fontWeight: FontWeight.w900,
+                      fontWeight: FontWeight.w400,
                     ),
                   ),
                 ),
                 // ignore: avoid_unnecessary_containers
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const LoginScreen()));
+                  },
                   child: Container(
                     padding: const EdgeInsets.symmetric(vertical: 10),
                     child: const Text(
                       "Log in",
                       style: TextStyle(
+                        decoration: TextDecoration.underline,
+                        // decorationStyle: TextDecorationStyle.solid,
+                        // decorationColor: Colors.pink,
+                        decorationThickness: 2,
+                        color: Colors.blue,
+                        fontSize: 15,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
