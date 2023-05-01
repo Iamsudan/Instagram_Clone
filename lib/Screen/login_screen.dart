@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:instagram/Screen/signup_screen.dart';
 import 'package:instagram/utils/colors.dart';
 import 'package:instagram/widgets/text_field_input.dart';
 
@@ -85,16 +86,26 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 Container(
                   padding: const EdgeInsets.symmetric(vertical: 8),
-                  child: const Text("Don't have an account"),
+                  child: const Text("Don't have an account?  "),
                 ),
                 // ignore: avoid_unnecessary_containers
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SignupScreen(),
+                        ));
+                  },
                   child: Container(
                     padding: const EdgeInsets.symmetric(vertical: 10),
                     child: const Text(
                       "Sign up",
                       style: TextStyle(
+                        color: Colors.blue,
+                        fontSize: 15,
+                        // fontStyle: FontStyle.italic,
+
                         fontWeight: FontWeight.bold,
                       ),
                     ),
