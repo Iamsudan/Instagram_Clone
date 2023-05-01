@@ -28,7 +28,10 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: mobileBackgroundColor,
       body: Center(
-        child: Image.asset("assests/insta.png"),
+        child: Image.asset(
+          "assests/insta.png",
+          color: Colors.blue,
+        ),
       ),
     );
   }
