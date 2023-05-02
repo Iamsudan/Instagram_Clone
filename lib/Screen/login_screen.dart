@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:instagram/Screen/signup_screen.dart';
+import 'package:instagram/resources/auth_method.dart';
 import 'package:instagram/utils/colors.dart';
 import 'package:instagram/widgets/text_field_input.dart';
+
+import '../utils/utils.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -14,6 +17,7 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  bool _isLoading = false;
 
   @override
   void dispose() {
@@ -21,6 +25,26 @@ class _LoginScreenState extends State<LoginScreen> {
     super.dispose();
     _emailController.dispose();
     _passwordController.dispose();
+  }
+
+  void loginUser() async {
+    setState(() {
+      _isLoading = true;
+    });
+    String res = await AuthMethods().loginUser(
+      email: _emailController.text,
+      password: _passwordController.text,
+    );
+    if (res == 'success') {
+      //
+    } else {
+      //
+      // ignore: use_build_context_synchronously
+      showSnackBar(res, context);
+    }
+    setState(() {
+      _isLoading = false;
+    });
   }
 
   @override
@@ -62,9 +86,16 @@ class _LoginScreenState extends State<LoginScreen> {
             //login button
 
             InkWell(
-              onDoubleTap: () {},
+              onTap: loginUser,
               child: Container(
-                child: const Text('Login'),
+                // ignore: sort_child_properties_last
+                child: _isLoading
+                    ? const Center(
+                        child: CircularProgressIndicator(
+                          color: primaryColor,
+                        ),
+                      )
+                    : const Text('Login'),
                 width: double.infinity,
                 alignment: Alignment.center,
                 padding: const EdgeInsets.symmetric(vertical: 10),
