@@ -38,15 +38,16 @@ class _SignupScreenState extends State<SignupScreen> {
         width: double.infinity,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Flexible(child: Container(), flex: 1),
             //svg image
             SvgPicture.asset(
               'assests/ic_instagram.svg',
               color: Colors.blue,
-              height: 64,
+              height: 60,
             ),
-            const SizedBox(height: 64),
+            const SizedBox(height: 60),
 
             //Text field
             TextFieldInput(
@@ -116,7 +117,7 @@ class _SignupScreenState extends State<SignupScreen> {
             const SizedBox(
               height: 15,
             ),
-            Flexible(child: Container(), flex: 1),
+            Flexible(child: Container(), flex: 2),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
