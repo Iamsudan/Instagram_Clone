@@ -80,8 +80,8 @@ class AuthMethods{
       String res = 'Some error Occured';
 
      try{
-        if(email.isNotEmpty||password.isNotEmpty){
-         await _auth.createUserWithEmailAndPassword(email: email, password: password);
+        if(email.isNotEmpty || password.isNotEmpty ){
+         await _auth.signInWithEmailAndPassword(email: email, password: password);
          res ='success';
         } else{
           res= 'Please enter all the fields ';
