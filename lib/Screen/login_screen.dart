@@ -52,7 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             TextFieldInput(
               textEditingController: _passwordController,
-              hintText: "Enter youy Password",
+              hintText: "Enter your Password",
               textInputType: TextInputType.text,
               isPass: true,
             ),
