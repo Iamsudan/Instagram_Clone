@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:instagram/Screen/home_screen.dart';
 import 'package:instagram/Screen/signup_screen.dart';
 import 'package:instagram/resources/auth_method.dart';
 import 'package:instagram/utils/colors.dart';
@@ -37,6 +38,8 @@ class _LoginScreenState extends State<LoginScreen> {
     );
     if (res == 'success') {
       //
+      // ignore: use_build_context_synchronously
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomeScreen(),));
     } else {
       //
       // ignore: use_build_context_synchronously
