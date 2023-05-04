@@ -49,11 +49,12 @@ class _SignupScreenState extends State<SignupScreen> {
     if (res != 'success') {
       // ignore: use_build_context_synchronously
       showSnackBar(res, context);
-    } else{
+    } else {
       // ignore: use_build_context_synchronously
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => const ResponsiveLayout(
-                    webScreenLayout: WebScreenLayout(),
-                    mobileScreenLayout: MobileScreenLayout())));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(
+          builder: (context) => const ResponsiveLayout(
+              webScreenLayout: WebScreenLayout(),
+              mobileScreenLayout: MobileScreenLayout())));
     }
   }
 
