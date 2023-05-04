@@ -64,6 +64,17 @@ flutter:
   assets:
     - assests/ic_instagram.svg
     - assests/insta.png
+    - assests/heart.png
+    - assests/home.png
+    - assests/instagram.png
+    - assests/logo.png
+    - assests/messenger.png
+    - assests/more.png
+    - assests/reels.png
+    - assests/search.png
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # An image asset can refer to one or more resolution-specific "variants", see
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see
