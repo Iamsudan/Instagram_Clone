@@ -4,6 +4,9 @@ import 'package:instagram/Screen/login_screen.dart';
 import 'package:instagram/resources/auth_method.dart';
 import 'package:instagram/utils/utils.dart';
 
+import '../responsive/mobile_screen_layout.dart';
+import '../responsive/responsive_layout.dart';
+import '../responsive/web_screen_layout.dart';
 import '../utils/colors.dart';
 import '../widgets/text_field_input.dart';
 
@@ -44,7 +47,13 @@ class _SignupScreenState extends State<SignupScreen> {
       _isLoading = false;
     });
     if (res != 'success') {
+      // ignore: use_build_context_synchronously
       showSnackBar(res, context);
+    } else{
+      // ignore: use_build_context_synchronously
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => const ResponsiveLayout(
+                    webScreenLayout: WebScreenLayout(),
+                    mobileScreenLayout: MobileScreenLayout())));
     }
   }
 
