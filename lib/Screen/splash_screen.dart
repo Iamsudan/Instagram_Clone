@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(const Duration(seconds: 2), () {
+    Timer(const Duration(seconds: 5), () {
       Navigator.pushReplacement(context,
           MaterialPageRoute(builder: (context) => const LoginScreen()));
     });
@@ -29,8 +29,9 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: mobileBackgroundColor,
       body: Center(
         child: Image.asset(
-          "assests/insta.png",
-          color: Colors.blue,
+          "assests/instagram.png",
+          color:Color.fromARGB(255, 204, 27, 151),
+          scale: 5,
         ),
       ),
     );
