@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:instagram/Screen/login_screen.dart';
+import 'package:instagram/Screen/splash_screen.dart';
 import 'package:instagram/utils/colors.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -19,7 +20,7 @@ class HomeScreen extends StatelessWidget {
                   'assests/ins.png',
                 ))),
             IconButton(
-                onPressed: () => const LoginScreen(),
+                onPressed: () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const SplashScreen(),)),
                 icon: const ImageIcon(AssetImage('assests/messenger.png')))
           ],
         ),
