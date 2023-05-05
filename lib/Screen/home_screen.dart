@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:instagram/Screen/login_screen.dart';
 import 'package:instagram/utils/colors.dart';
 
@@ -14,7 +15,7 @@ class HomeScreen extends StatelessWidget {
           actions: [
             IconButton(
                 onPressed: () => const LoginScreen(),
-                icon: const ImageIcon(AssetImage('assests/ic_instagram.svg'))),
+                icon: const ImageIcon(SvgPicture.asset('assests/ic_instagram.svg'))),
             IconButton(
                 onPressed: () => const LoginScreen(),
                 icon: const ImageIcon(AssetImage('assests/messenger.png')))
