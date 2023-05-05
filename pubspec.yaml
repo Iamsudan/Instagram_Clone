@@ -63,6 +63,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assests/ic_instagram.svg
+    - assests/ins.png
     - assests/insta.png
     - assests/heart.png
     - assests/home.png
