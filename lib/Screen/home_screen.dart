@@ -15,7 +15,9 @@ class HomeScreen extends StatelessWidget {
           actions: [
             IconButton(
                 onPressed: () => const LoginScreen(),
-                icon: const ImageIcon(SvgPicture.asset('assests/ic_instagram.svg'))),
+                icon: const ImageIcon(AssetImage(
+                  'assests/ins.png',
+                ))),
             IconButton(
                 onPressed: () => const LoginScreen(),
                 icon: const ImageIcon(AssetImage('assests/messenger.png')))
