@@ -41,7 +41,7 @@ class Myapp extends StatelessWidget {
         
         theme: ThemeData.dark()
             .copyWith(scaffoldBackgroundColor: mobileBackgroundColor),
-            home: const HomeScreen());
+            home: const SplashScreen());
         
   }
 }
