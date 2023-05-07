@@ -40,6 +40,7 @@ class Myapp extends StatelessWidget {
         title: 'Instagram',
         
         theme: ThemeData.dark()
+        
             .copyWith(scaffoldBackgroundColor: mobileBackgroundColor),
             home: const SplashScreen());
         
