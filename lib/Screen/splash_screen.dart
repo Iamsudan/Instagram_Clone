@@ -64,8 +64,8 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: mobileBackgroundColor,
       body: Center(
         child: Image.asset(
-          "assests/instagram.png",
-          color: const Color.fromARGB(255, 204, 27, 151),
+          "assests/logoo.png",
+        //  color: const Color.fromARGB(255, 204, 27, 151),
           scale: 5,
         ),
       ),
