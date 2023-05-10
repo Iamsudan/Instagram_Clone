@@ -86,6 +86,7 @@ class _SignupScreenState extends State<SignupScreen> {
             const SizedBox(
               height: 25,
             ),
+            
 
             TextFieldInput(
                 textEditingController: _usernameController,
